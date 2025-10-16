@@ -1,0 +1,24 @@
+;; Global home row mods (modifier-only)
+;; Tap sends the normal key (works with Icelandic & US)
+
+(defcfg
+  process-unmapped-keys yes
+)
+
+;; 8 keys in order: left a s d f | right j k l ;
+(defsrc a s d f j k l ;)
+
+(deflayer base
+  ;; Left hand
+  (tap-hold 200 200 a lshift)
+  (tap-hold 200 200 s lalt)
+  (tap-hold 200 200 d lmet)
+  (tap-hold 200 200 f lctrl)
+
+  ;; Right hand
+  (tap-hold 200 200 j lctrl)
+  (tap-hold 200 200 k lmet)
+  (tap-hold 200 200 l lalt)
+  (tap-hold 200 200 ; lshift)
+)
+
